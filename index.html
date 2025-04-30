@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HyperTyper</title>
+    <link rel="stylesheet" href="hyperstyles.css"/>
+</head>
+<body>
+    <nav class="test-nav">
+        <div class="nav-brand">HYPERTYPER</div>
+        <div class="test-nav-group">
+            <button class="test-length-btn active" data-length="5">5 Words</button>
+            <button class="test-length-btn" data-length="10">10 Words</button>
+            <button class="test-length-btn" data-length="15">15 Words</button>
+            <button class="test-length-btn" data-length="20">20 Words</button>
+            <button class="test-length-btn" data-length="25">25 Words</button>
+            <button class="test-length-btn" data-length="50">50 Words</button>
+            <button class="test-length-btn" data-length="100">100 Words</button>
+        </div>
+        <button id="nav-history-button" class="nav-icon-button" title="View Test History">📊</button>
+    </nav>
+
+    <div id="homepage">
+    </div>
+
+    <div id="type-page">
+        <h1 id="header">HyperTyper</h1>
+        <p id="text-area"><span id="type-area"></span> <span id="text-to-type"></span></p>
+        <p id="result"></p>
+        <div class="test-buttons">
+            <button id="new-test-button" tabindex="-1">⟳</button>
+            <button id="reset-best-button" tabindex="-1" title="Reset High Score">↓</button>
+        </div>
+        <div id="live-stats">
+            <div class="live-stat">
+                <span id="live-wpm">0</span>
+                <span class="live-label">WPM</span>
+                <span class="best-indicator">↑ <span id="best-indicator-value">0</span></span>
+            </div>
+        </div>
+    </div>
+
+    <div id="stats-page">
+        <h1 id="stats-header">Test Results</h1>
+        <div id="current-stats">
+            <h3 id="current-wpm">WPM: --</h3>
+            <h3 id="current-accuracy">Accuracy: --%</h3>
+        </div>
+        <h3 id="best-wpm">Best WPM: --</h3>
+        <div class="stats-buttons">
+            <button id="stats-new-test-button" tabindex="-1">New Test</button>
+            <button id="repeat-test-button" tabindex="-1">Repeat Test</button>
+            <button id="view-history-button" tabindex="-1">View History</button>
+        </div>
+    </div>
+
+    <div id="history-page">
+        <h1 id="history-header">Test History</h1>
+        <div class="history-nav">
+            <button class="history-nav-btn active" data-length="all">All Tests</button>
+            <button class="history-nav-btn" data-length="5">5 Words</button>
+            <button class="history-nav-btn" data-length="10">10 Words</button>
+            <button class="history-nav-btn" data-length="15">15 Words</button>
+            <button class="history-nav-btn" data-length="20">20 Words</button>
+            <button class="history-nav-btn" data-length="25">25 Words</button>
+            <button class="history-nav-btn" data-length="50">50 Words</button>
+            <button class="history-nav-btn" data-length="100">100 Words</button>
+        </div>
+        <div class="history-stats">
+            <div class="history-summary">
+                <div class="summary-card">
+                    <h3>Average WPM</h3>
+                    <p id="avg-wpm">--</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Average Accuracy</h3>
+                    <p id="avg-accuracy">--</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Tests Completed</h3>
+                    <p id="total-tests">--</p>
+                </div>
+            </div>
+            <div class="history-list">
+                <table id="history-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Words</th>
+                            <th>WPM</th>
+                            <th>Accuracy</th>
+                        </tr>
+                    </thead>
+                    <tbody id="history-data">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <button id="back-to-stats" tabindex="-1">Back to Stats</button>
+    </div>
+    <script src="hypertyper.jss"></script>
+</body>
+</html>
+
